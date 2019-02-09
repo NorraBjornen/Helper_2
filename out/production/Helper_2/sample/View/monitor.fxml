@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.MonitorController">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="420.0">
+         <children>
+            <VBox prefHeight="400.0" prefWidth="360.0">
+               <children>
+                  <Label fx:id="Address" text="Label">
+                     <font>
+                        <Font size="12.0" />
+                     </font></Label>
+                  <Label fx:id="Description" text="Label">
+                     <font>
+                        <Font size="12.0" />
+                     </font></Label>
+                  <Label fx:id="Price" text="Label">
+                     <font>
+                        <Font size="12.0" />
+                     </font></Label>
+                  <Label fx:id="Route" text="Label">
+                     <font>
+                        <Font size="12.0" />
+                     </font></Label>
+                  <Label fx:id="DriverInfo" text="Label">
+                     <font>
+                        <Font size="12.0" />
+                     </font></Label>
+                  <Label fx:id="Phone" text="Label" />
+                  <TableView fx:id="Journal" prefWidth="360.0" stylesheets="@style.css">
+                    <columns>
+                        <TableColumn fx:id="TimeC" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" text="Врм" />
+                      <TableColumn fx:id="AddressC" maxWidth="180.0" minWidth="260.0" prefWidth="180.0" text="Адрес" />
+                      <TableColumn fx:id="CallsignC" maxWidth="39.0" minWidth="39.0" prefWidth="39.0" text="Вд" />
+                        <TableColumn fx:id="PriceC" maxWidth="59.0" minWidth="59.0" prefWidth="59.0" text="Цена" />
+                        <TableColumn fx:id="StatusC" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" text="Стс" />
+                    </columns>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </VBox>
+         </children>
+         <HBox.margin>
+            <Insets bottom="40.0" left="40.0" right="20.0" top="40.0" />
+         </HBox.margin>
+      </VBox>
+      <TableView fx:id="Market" maxHeight="400.0" maxWidth="260.0" prefHeight="400.0" prefWidth="140.0" stylesheets="@style.css">
+        <columns>
+          <TableColumn fx:id="CallsignD" prefWidth="75.0" text="Позыв." />
+          <TableColumn fx:id="TimeD" prefWidth="75.0" text="Время" />
+            <TableColumn fx:id="PriceD" prefWidth="75.0" text="Цена" />
+        </columns>
+         <HBox.margin>
+            <Insets bottom="40.0" right="20.0" top="40.0" />
+         </HBox.margin>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </children>
+</HBox>
